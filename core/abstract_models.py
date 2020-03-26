@@ -109,7 +109,7 @@ class AbstractBaseAuthor(AbstractTimeStampModel):
 
     def get_underscore_name(self):
         new_underscore_name = self.name.replace(" ", "_")
-        return new_underscore_name;
+        return new_underscore_name
 
     def __str__(self):
         return self.name

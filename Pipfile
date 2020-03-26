@@ -10,6 +10,7 @@ django = "==2.2.*"
 django-allauth = "*"
 pillow = "*"
 django-import-export = "*"
+django-jet = "*"
 
 [requires]
 python_version = "3.7"

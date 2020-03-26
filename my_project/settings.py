@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jet', #must be above contrib.admin
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,7 +41,8 @@ INSTALLED_APPS = [
 
 
     'django.contrib.sites',
-
+    
+    #third party
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
