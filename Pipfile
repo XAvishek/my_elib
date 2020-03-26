@@ -8,6 +8,8 @@ verify_ssl = true
 [packages]
 django = "==2.2.*"
 django-allauth = "*"
+pillow = "*"
+django-import-export = "*"
 
 [requires]
 python_version = "3.7"

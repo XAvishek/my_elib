@@ -47,9 +47,12 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.instagram',
+    'import_export',
 
     #custom apps
-    'accounts'
+    'accounts',
+    'books',
+    'core',
 ]
 
 SITE_ID = 1
@@ -136,6 +139,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+#imort_export configuration
+IMPORT_EXPORT_USE_TRANSACTIONS = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/

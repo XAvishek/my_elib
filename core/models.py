@@ -7,8 +7,8 @@ from .abstract_models import (
 
 )
 from .constants import LANGUAGES
-from django.core import urlresolvers
-# from django.urls import reverse
+# from django.core import urlresolvers
+from django.urls import reverse
 
 class Category(AbstractTimeStampModel):
     category_name = models.CharField(
@@ -55,7 +55,7 @@ class Publisher(AbstractTimeStampModel):
         return self.publisher_name
 
     def get_admin_url(self):
-        return urlresolvers.reverse("admin:%s_%s_change" %(self._meta.app_label, self._meta.model_name), args=(self.pk,))
+        return reverse("admin:%s_%s_change" %(self._meta.app_label, self._meta.model_name), args=(self.pk,))
 
     def get_absolute_url(self):
         from django.urls import reverse
@@ -162,7 +162,7 @@ class Sponsor(AbstractTimeStampModel):
         db_table = "sponsor"
 
     def get_admin_url(self):
-        return urlresolvers.reverse("admin:%s_%s_change" %(self._meta.app_label, self._meta.model_name), args=(self.pk,))
+        return reverse("admin:%s_%s_change" %(self._meta.app_label, self._meta.model_name), args=(self.pk,))
 
 
 
